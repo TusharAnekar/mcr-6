@@ -27,8 +27,8 @@ export function Home() {
           <div key={id}>
             <h3 onClick={() => handleRestaurantSelection(id)}>Dishes by {name}</h3>
             <div className="menu_container">
-              {menu.map(({ name, imgSrc, price, qty }) => (
-                <div className="item_container">
+              {menu.map(({ name, imgSrc, price, qty }, index) => (
+                <div key={index} className="item_container">
                   <img src={imgSrc} alt={name} />
                   <h4>{name}</h4>
                   <p>

@@ -41,9 +41,18 @@ export function CuisineProvider({ children }) {
     navigate(`/${id}`)
   }
 
+  function addReview (id, review) {
+    const restaurantToAddReview = restaurantsData.find((restaurant) => restaurant.id === id)
+    console.log(restaurantToAddReview)
+    cuisineDispatch({
+      type: "ADD_REVIEW",
+      payload: {...restaurantToAddReview, ratings: [...restaurantToAddReview.ratings, review]},
+    });
+  }
+
   return (
     <CuisineContext.Provider
-      value={{ cuisineState, handleCuisineButton, handleRestaurantSelection }}
+      value={{ cuisineState, handleCuisineButton, handleRestaurantSelection, addReview }}
     >
       {children}
     </CuisineContext.Provider>
