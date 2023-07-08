@@ -1,0 +1,19 @@
+h3 {
+    cursor: pointer;
+}
+
+.menu_container {
+    display: flex;
+    column-gap: 10px;
+}
+
+.item_container {
+    width: 300px;
+    height: 400px;
+    border: 1px solid gray;
+}
+
+.item_container img {
+    width: 300px;
+    height: 300px;
+}
