@@ -52,8 +52,9 @@ export function RestaurantDetails() {
 
       <Modal open={showModal} onClose={() => setShowModal(false)} center>
         <h3>Add your review</h3>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="review_form_container">
           <label>
+          Rating:
             <input
               type="number"
               name="rating"
@@ -66,7 +67,6 @@ export function RestaurantDetails() {
           <label>
             Comment
             <input type="text" name="comment" required onChange={handleInput} />
-            Rating:
           </label>
           <button type="submit">Submit</button>
         </form>

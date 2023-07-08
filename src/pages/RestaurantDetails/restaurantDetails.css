@@ -24,3 +24,24 @@
     display: flex;
     column-gap: 10px;
 }
+
+.review_form_container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.review_form_container label {
+    font-size: large;
+}
+
+.review_form_container input {
+    margin-left: 5px;
+    padding: 5px;
+    font-size: large;
+}
+
+.review_form_container button {
+    padding: 10px;
+    cursor: pointer;
+}
