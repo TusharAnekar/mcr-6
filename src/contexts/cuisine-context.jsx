@@ -1,4 +1,6 @@
 import { createContext, useEffect, useReducer } from "react";
+import { useNavigate } from "react-router-dom";
+
 import {
   cuisineReducer,
   initialCuisineState,
@@ -13,6 +15,8 @@ export function CuisineProvider({ children }) {
     cuisineReducer,
     initialCuisineState
   );
+
+  const navigate = useNavigate();
 
   function getCuisine() {
     cuisineDispatch({ type: "DISPLAY_CUISINE", payload: cuisineData });
@@ -32,8 +36,9 @@ export function CuisineProvider({ children }) {
   function handleRestaurantSelection(id) {
     cuisineDispatch({
       type: "DISPLAY_RESTAURANT",
-      payload: restaurantsData.filter((restaurant) => restaurant.id === id),
+      payload: restaurantsData.find((restaurant) => restaurant.id === id),
     });
+    navigate(`/${id}`)
   }
 
   return (

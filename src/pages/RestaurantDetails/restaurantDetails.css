@@ -1,0 +1,26 @@
+.restaurant_page {
+    text-align: center;
+}
+
+.restaurant_details_container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    justify-content: space-around;
+}
+
+.rating_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rating_container img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.img_name_container {
+    display: flex;
+    column-gap: 10px;
+}
